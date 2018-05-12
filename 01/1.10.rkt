@@ -98,7 +98,7 @@
 (A 1 (A 1 (- n 1)))
 ; which we already know to be
 (A 1 (expt 2 (- n 1)))
-; Expandng, we get
+; Expanding, we get
 (expt 2 (expt 2 (- n 1)))
 ; so
 ; h(n) = 2^(2^[n-1])
