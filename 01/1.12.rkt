@@ -14,8 +14,7 @@
 ; Pascal’s triangle by means of a recursive process.
 
 (define (C x y)
-  (cond ((= x 0) 1)
-        ((= y 0) 1)
+  (cond ((= y 0) 1)
         ((= x y) 1)
         (else (+ (C (dec x) y)
                  (C (dec x) (dec y))))))
