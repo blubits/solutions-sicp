@@ -17,7 +17,9 @@
       (curt-iter (improve guess x) x)))
 
 (define (f x y)
-  (/ (+ (/ x (square y)) (* 2 y)) 3))
+  (/ (+ (/ x (square y))
+        (* 2 y))
+     3))
 
 (define (improve guess x)
   (f x guess))
