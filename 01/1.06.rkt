@@ -44,6 +44,8 @@
 ; What happens when Alyssa attempts to use this to compute square roots?
 ; Explain.
 
+; ---------------------------------------------------------------------
+
 ; Using applicative order on
 (sqrt 2)
 ; We see that it becomes equal to
@@ -71,4 +73,3 @@
 (define (try a)
   (if (= a 0) 1 (/ 1 0))
 (try 0)
-

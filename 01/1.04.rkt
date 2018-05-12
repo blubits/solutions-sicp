@@ -8,6 +8,8 @@
 (define (a-plus-abs-b a b)
   ((if (> b 0) + -) a b))
 
+; ---------------------------------------------------------------------
+
 ; The function below reduces a + |b| to (op a b)
 ; op is either + or - depending on the sign of b
 ; The if function selects the operator, so

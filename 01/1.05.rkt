@@ -23,6 +23,8 @@
 ; result determines whether to evaluate the consequent or the alternative
 ; expression.)
 
+; ---------------------------------------------------------------------
+
 ; Applicative-order:
 ; (p) always evaluates to itself
 ; so the function never finishes evaluating
