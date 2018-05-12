@@ -72,7 +72,7 @@
 ; by the procedures f , g , and h for positive integer values of n.
 ; For example, (k n) computes 5n^2.
 
-(define n 3)
+(define n 4)
 
 (f n)
 (A 0 n)
@@ -95,10 +95,15 @@
 
 (h n)
 (A 2 n)
-(A 1 (A 1 (- n 1)))
-; which we already know to be
-(A 1 (expt 2 (- n 1)))
-; Expanding, we get
-(expt 2 (expt 2 (- n 1)))
+(A 1 (A 2 (- n 1)))
+(expt 2 (A 2 (- n 1)))
+(expt 2 (A 1 (A 2 (- n 2))))
+(expt 2 (expt 2 (A 2 (- n 2))))
+; ...
+; (expt 2 (expt 2 (expt 2... (expt 2 (A 1 1)))))
+; (expt 2 (expt 2 (expt 2... (expt 2 2))))
+;                       |---- n-1 times ----|
 ; so
-; h(n) = 2^(2^[n-1])
+; h(n) = 2^2^2^... (n-1 times)
+; or
+; h(n) = 2 up (n-1)
