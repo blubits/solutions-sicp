@@ -78,12 +78,11 @@
 
 ; Results:
 ;
+;           time        mag
 ; 10^12     14956
 ; 10^13     68015       4.54
 ; 10^14     195579      2.88
 ; 10^15     715909      3.66
-;                       ave. 3.69
+;                       ave. 3.69 approx sqrt(10)
 ;
-; The left-hand column is the magnitude difference, which
-; is approx sqrt(10). This means that our prime? procedure
-; is indeed O(sqrt(n))
+; This means that our prime? procedure is indeed O(sqrt(n))
