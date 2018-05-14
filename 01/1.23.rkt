@@ -99,3 +99,7 @@
 ;                                   ave. 2.15       ave. 2.91
 ;
 ; There is a two-fold improvement in speed.
+; Although it probably depends on all sorts of things about the environment
+; you're in. I think Racket optimizes the if away, which is why it
+; doesn't factor into the overhead. Or maybe if we rerun the code, the
+; resulting factors will be different.
