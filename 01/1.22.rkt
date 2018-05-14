@@ -28,7 +28,7 @@
 (define (prime? n)
   (= n (smallest-divisor n)))
 
-; Slightly modified to produce cleaner output
+; prime-test sequence slightly modified to produce cleaner output
 
 (define (timed-prime-test n)
   (start-prime-test n (runtime)))
