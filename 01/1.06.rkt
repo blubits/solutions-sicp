@@ -1,6 +1,7 @@
 #lang sicp
 
 ; Exercise 1.6
+; ============
 ; Alyssa P. Hacker doesn’t see why if needs to be provided as a special form.
 ; “Why can’t I just define it as an ordinary procedure in terms of cond?” she
 ; asks. Alyssa’s friend Eva Lu Ator claims this can indeed be done, and she
@@ -43,21 +44,28 @@
 
 ; What happens when Alyssa attempts to use this to compute square roots?
 ; Explain.
-
 ; ---------------------------------------------------------------------
-
 ; Using applicative order on
 (sqrt 2)
+
 ; We see that it becomes equal to
 (sqrt-iter 1.0 2)
-(new-if (good-enough? 1.0 2) (1.0) (sqrt-iter 1.5 2)))
-(new-if (good-enough? 1.0 2) (1.0) (new-if (good-enough? 1.5 2) (1.5) (sqrt-iter 1.4167 2))))
+(new-if (good-enough? 1.0 2)
+  (1.0)
+  (sqrt-iter 1.5 2)))
+(new-if (good-enough? 1.0 2)
+  (1.0)
+  (new-if (good-enough? 1.5 2)
+          (1.5)
+          (sqrt-iter 1.4167 2))))
+; ...
+
 ; Because Lisp uses applicative-order evaluation to run, new-if evaluates
 ; the predicate and the expressions simultaneously; the <else> predicate
 ; evaluates indefinitely without terminating.
 ; The (if) construct solves this by evaluating the predicate first, and
 ; then evaluating the appropriate expression.
-
+;
 ; There's a counterexample in the scheme wiki (c) dft
 ; (http://community.schemewiki.org/?sicp-ex-1.6)
 ; that goes like this:

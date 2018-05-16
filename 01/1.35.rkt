@@ -4,16 +4,15 @@
 ; Show that the golden ratio φ (1.2.2) is a fixed point of the transformation
 ; x -> 1 + 1/x, and use this fact to compute φ by means of the fixed-point
 ; procedure.
-;
 ; ---------------------------------------------------------------------
 ; Proof. The golden ratio is the positive root of the equation
 ;
-; x^2 - x - 1 = 0.
+;     x^2 - x - 1 = 0.
 ;
 ; But isolation will easily get us
 ;
-; x^2 = x + 1
-; x = 1 + 1/x
+;     x^2 = x + 1
+;     x = 1 + 1/x
 ;
 ; which corresponds to the transformation above.
 ;

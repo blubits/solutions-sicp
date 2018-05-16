@@ -1,6 +1,7 @@
 #lang sicp
 
 ; Exercise 1.24
+; =============
 ; Modify the timed-prime-test procedure of Exercise 1.22 to use fast-prime?
 ; (the Fermat method), and test each of the 12 primes you found in that
 ; exercise. Since the Fermat test has Θ(log ⁡n) growth, how would you expect the
@@ -34,8 +35,6 @@
          (fast-prime? n (- times 1)))
         (else false)))
 
-; prime-test sequence slightly modified to produce cleaner output
-
 (define (timed-prime-test n)
   (start-prime-test n (runtime)))
 
@@ -60,22 +59,16 @@
     (cond ((<= n end) (timed-prime-test n) (search-iter (+ n 2)))))
   (search-iter (if (even? start) (inc start) start)))
 
-; This will run ridiculously fast on modern hardware
-; (current laptop is a 7th gen i7), so let's try bigger numbers
-; (search-for-primes 1000 1050)
-; (search-for-primes 10000 10050)
-; (search-for-primes 100000 100050)
-; (search-for-primes 1000000 1000050)
-
 ; We'll be getting ave(first 3) of the following:
 (search-for-primes 1000000000000000 1000000000000159)
 (search-for-primes 1000000000000000000 1000000000000000031)
 
 ; Results:
 ;
-;           time        mag
-; 10^15     3008
-; 10^18     3341        1.11 approx log(10^18)/log(10^15) = 1.2
+;               time        mag
+;     10^15     3008
+;     10^18     3341        1.11
+;                           approx log(10^18)/log(10^15) = 1.2
 ;
 ; It is indeed equal to log(n), although as with everything this depends
 ; on your environment and your Lisp variant.

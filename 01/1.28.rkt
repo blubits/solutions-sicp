@@ -1,8 +1,9 @@
 #lang sicp
 
 ; TODO explain better
-;
+
 ; Exercise 1.28
+; =============
 ; One variant of the Fermat test that cannot be fooled is called the
 ; Miller-Rabin test (Miller 1976; Rabin 1980). This starts from an alternate
 ; form of Fermat’s Little Theorem, which states that if n is a prime number

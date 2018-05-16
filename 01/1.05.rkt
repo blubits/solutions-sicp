@@ -1,6 +1,7 @@
 #lang sicp
 
 ; Exercise 1.5
+; ============
 ; Ben Bitdiddle has invented a test to determine whether the interpreter he is
 ; faced with is using applicative-order evaluation or normal-order evaluation.
 ; He defines the following two procedures:
@@ -17,24 +18,23 @@
 
 ; What behavior will Ben observe with an interpreter that uses applicative-order
 ; evaluation? What behavior will he observe with an interpreter that uses
-; normal-order evaluation? Explain your answer. (Assume that the evaluation rule
-; for the special form if is the same whether the interpreter is using normal
-; or applicative order: The predicate expression is evaluated first, and the
-; result determines whether to evaluate the consequent or the alternative
-; expression.)
-
+; normal-order evaluation? Explain your answer.
+;
+; (Assume that the evaluation rule for the special form if is the same whether
+; the interpreter is using normal or applicative order: The predicate
+; expression is evaluated first, and the result determines whether to evaluate
+; the consequent or the alternative expression.)
 ; ---------------------------------------------------------------------
-
 ; Applicative-order:
-; (p) always evaluates to itself
-; so the function never finishes evaluating
+; (p) always evaluates to itself, so the function never finishes evaluating.
 (test 0 (p))
 (test 0 (p))
 (test 0 (p))
+; ...
 
 ; Normal-order:
-; (p) is luckily never evaluated
-; so we finish successfully
+; (p) is never evaluated since the (if) resolves to true first.
+; The function finishes successfully.
 (test 0 (p))
 (if (= 0 0) (0) (p))
 (if (#t) (0) (p))

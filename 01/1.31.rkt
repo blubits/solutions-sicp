@@ -1,6 +1,7 @@
 #lang sicp
 
 ; Exercise 1.31
+; =============
 ; The sum procedure is only the simplest of a vast number of similar
 ; abstractions that can be captured as higher-order procedures. Write an
 ; analogous procedure called product that returns the product of the values of
@@ -8,9 +9,9 @@
 ; terms of product. Also use product to compute approximations to pi using the
 ; formula
 ;
-; pi/4 = 2 * 4 * 4 * 6 * 6 * 8 * ...
-;        ---------------------------
-;        3 * 3 * 5 * 5 * 7 * 7 * ...
+;     pi   2 * 4 * 4 * 6 * 6 * 8 * ...
+;     -- = ---------------------------
+;      4   3 * 3 * 5 * 5 * 7 * 7 * ...
 
 (define (product term a next b)
   (if (> a b)

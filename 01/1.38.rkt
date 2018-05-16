@@ -1,6 +1,7 @@
 #lang sicp
 
 ; Exercise 1.38
+; =============
 ; In 1737, the Swiss mathematician Leonhard Euler published a memoir De
 ; Fractionibus Continuis, which included a continued fraction expansion for
 ; e − 2 , where e is the base of the natural logarithms. In this fraction, the

@@ -1,6 +1,7 @@
 #lang sicp
 
 ; Exercise 1.20
+; =============
 ; The process that a procedure generates is of course dependent on the rules
 ; used by the interpreter. As an example, consider the iterative gcd procedure
 ; given above. Suppose we were to interpret this procedure using normal-order
@@ -16,9 +17,7 @@
       a
       (gcd b (remainder a b))))
 
-; ---------------------------------------------------------------------
-
-; Normal-order
+; Normal-order:
 (gcd 206 40)
 
 (if (= 40 0)
@@ -92,11 +91,9 @@
 (remainder 6 4)
 2
 
-; = 18 op
+;     = 18 operations
 
-; ---------------------------------------------------------------------
-
-; Applicative order
+; Applicative order:
 (gcd 206 40)
 
 ; 1 op
@@ -134,4 +131,4 @@
 (if #t 2 (gcd (0 (remainder 2 0))))
 2
 
-; = 4 op
+;     = 4 operations

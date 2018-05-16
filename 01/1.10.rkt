@@ -1,6 +1,7 @@
 #lang sicp
 
 ; Exercise 1.10
+; =============
 ; The following procedure computes a mathematical function called
 ; Ackermann’s function.
 
@@ -69,7 +70,7 @@
 (define (k n) (* 5 n n))
 
 ; Give concise mathematical definitions for the functions computed
-; by the procedures f , g , and h for positive integer values of n.
+; by the procedures f, g, and h for positive integer values of n.
 ; For example, (k n) computes 5n^2.
 
 (define n 4)
@@ -77,7 +78,8 @@
 (f n)
 (A 0 n)
 (* 2 n)
-; f(n) = 2n
+; Therefore,
+;     f(n) = 2n
 
 (g n)
 (A 1 n)
@@ -90,8 +92,9 @@
 ; ...
 ;         |--- n times inside ----|
 ; (* 2 (* 2 (* 2 (* 2.. (* 2 2)))))
+;
 ; This is just (expt 2 n), so
-; g(n) = 2^n
+;     g(n) = 2^n
 
 (h n)
 (A 2 n)
@@ -103,7 +106,8 @@
 ; (expt 2 (expt 2 (expt 2... (expt 2 (A 1 1)))))
 ; (expt 2 (expt 2 (expt 2... (expt 2 2))))
 ;                       |---- n-1 times ----|
+;
 ; so
-; h(n) = 2^2^2^... (n-1 times)
+;     h(n) = 2^2^2^... (n-1 times)
 ; or
-; h(n) = 2 up (n-1)
+;     h(n) = 2 up (n-1)

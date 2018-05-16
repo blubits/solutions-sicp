@@ -1,6 +1,7 @@
 #lang sicp
 
 ; Exercise 1.17
+; =============
 ; The exponentiation algorithms in this section are based on performing
 ; exponentiation by means of repeated multiplication. In a similar way, one can
 ; perform integer multiplication by means of repeated addition. The following

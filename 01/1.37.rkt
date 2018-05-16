@@ -3,13 +3,13 @@
 ; Exercise 1.37
 ; An infinite continued fraction is an expression of the form
 ;
-; f =   N1
-;     ------
-;     D1 + N2
-;        ------
-;        D2 + N3
-;           ------
-;           D3 + ...
+;     f =   N1
+;         ------
+;         D1 + N2
+;            ------
+;            D2 + N3
+;               ------
+;               D3 + ...
 ;
 ; As an example, one can show that the infinite continued fraction expansion
 ; with the Ni and the Di all equal to 1 produces 1/phi, where phi is the golden
@@ -47,11 +47,8 @@
 ; for successive values of k. How large must you make k in order to get an
 ; approximation that is accurate to 4 decimal places?
 ; ---------------------------------------------------------------------
-;
 ; As you can see above, k = 12 for phi approx 1.6180.
-;
 ; ---------------------------------------------------------------------
-;
 ; If your cont-frac procedure generates a recursive process, write one that
 ; generates an iterative process. If it generates an iterative process, write
 ; one that generates a recursive process.

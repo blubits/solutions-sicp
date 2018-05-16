@@ -1,15 +1,13 @@
 #lang sicp
 
 ; Exercise 1.33
+; =============
 ; You can obtain an even more general version of accumulate (Exercise 1.32) by
 ; introducing the notion of a filter on the terms to be combined. That is,
 ; combine only those terms derived from values in the range that satisfy a
 ; specified condition. The resulting filtered-accumulate abstraction takes the
 ; same arguments as accumulate, together with an additional predicate of one
 ; argument that specifies the filter. Write filtered-accumulate as a procedure.
-
-; accumulate-iter is the best platform for this, since it keeps a state
-; variable k
 
 (define (filtered-accumulate combiner null-value filter term a next b)
   (define (iter a result)
