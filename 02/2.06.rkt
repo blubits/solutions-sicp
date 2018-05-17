@@ -29,7 +29,7 @@
 (lambda (f) (lambda (x) (f (f x))))
 
 ; So add is basically repeated function composition:
-; x + y = x(y(n))
+; x + y = f(n) composed x+y times
 (define (add x y)
   (lambda (f)
     (lambda (f) (lambda (x) ((x f) ((y f) x)))))
