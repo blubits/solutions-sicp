@@ -2,6 +2,7 @@
 
 ; Exercise 2.6
 ; ============
+; TODO: better explanation
 ; In case representing pairs as procedures wasn’t mind-boggling enough,
 ; consider that, in a language that can manipulate procedures, we can get by
 ; without numbers (at least insofar as nonnegative integers are concerned) by
