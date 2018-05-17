@@ -29,4 +29,4 @@
   (display (denom x))
   (newline))
 
-(print-rat (make-rat 100 -120))
+(print-rat (make-rat 1 -2))
