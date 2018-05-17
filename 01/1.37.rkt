@@ -1,6 +1,7 @@
 #lang sicp
 
 ; Exercise 1.37
+; =============
 ; An infinite continued fraction is an expression of the form
 ;
 ;     f =   N1
