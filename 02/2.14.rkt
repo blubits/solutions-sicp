@@ -1,11 +1,12 @@
 #lang sicp
 
-; Exercise 2.12
+; Exercise 2.14
 ; =============
-; Define a constructor make-center-percent that takes a center and a percentage
-; tolerance and produces the desired interval. You must also define a selector
-; percent that produces the percentage tolerance for a given interval.
-; The center selector is the same as the one shown above.
+; Demonstrate that Lem is right. Investigate the behavior of the system on a
+; variety of arithmetic expressions. Make some intervals A and B, and use
+; them in computing the expressions A/A and A/B. You will get the
+; most insight by using intervals whose width is a small percentage of the
+; center value. Examine the results of the computation in center-percent form.
 
 (define (make-interval a b) (cons a b))
 (define (upper-bound int) (cdr int))
@@ -27,8 +28,3 @@
 (define (make-center-percent c p) (make-center-width c (* p c)))
 (define (percentage int)
   (/ (width int) (center int)))
-
-(define test (make-center-percent 10 0.05))
-(center test)
-(width test)
-(percentage test)
